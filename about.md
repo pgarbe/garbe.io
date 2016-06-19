@@ -6,7 +6,7 @@ sharing: false
 footer: false
 ---
 
-<img src="/assets/me.jpg" alt="Philipp Garbe" style="float: right; width: 200px;"/>
+<img src="/assets/philipp.jpg" alt="Philipp Garbe" style="float: right; width: 200px;"/>
 
 Philipp Garbe works as Lead Software Developer at [AutoScout24](https://www.autoscout24.de) in Munich. Since more than 6 years he's working with web technologies and at the moment he's part of "Tatsu" the project that transforms the matured AutoScout24 IT setup into a nextgen Web-Scale IT platform. As [Docker Captain](https://www.docker.com/community/docker-captains) he also tries to share his knowledge and experience about Containers.
 
