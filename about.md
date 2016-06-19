@@ -6,11 +6,17 @@ sharing: false
 footer: false
 ---
 
-My name is Philipp Garbe and I work as a developer in Munich.
+<img src="/assets/me.jpg" alt="Philipp Garbe" style="float: right; width: 200px;"/>
 
-I started programming when I was a teen (some C++ but mostly VB). After .Net was first-time released I switched to C# and it is still my favourite language. But in the last couple of months I came more and more in contact with Ruby and F#. And not to forget my love-hate relationship with JavaScript. For almost all of my projects I use Git as version control and the more I work with it the more I love it.
+Philipp Garbe works as Lead Software Developer at [AutoScout24](https://www.autoscout24.de) in Munich. Since more than 6 years he's working with web technologies and at the moment he's part of "Tatsu" the project that transforms the matured AutoScout24 IT setup into a nextgen Web-Scale IT platform. As [Docker Captain](https://www.docker.com/community/docker-captains) he also tries to share his knowledge and experience about Containers.
 
-For several years now, I have been working for a great [company](http://www.autoscout24.de) in Munich. We work in very agile teams and I have the freedom to experiment with techniques like CQRS, Event Sourcing and DDD. I also believe that [Continuous Delivery](http://continuousdelivery.com) (or [Continuous Deployment](http://continuousdelivery.com/2010/08/continuous-delivery-vs-continuous-deployment/) if possible) is fundamental for good teams and good products.
+Philipp is driven by technologies and tools that allows him to release faster and more often. He expects that every commit automatically goes into production and it shouldn't surprise that he's excited about microservices, docker and the cloud. Affected by Pain Driven Development, he believes that things needs to be changed whenever the pain is big enough.
+
+## Contact
+Email: [blog@garbe.io](mailto:blog@garbe.io)  
+Twitter: [@pgarbe](https://twitter.com/pgarbe)  
+LinkedIn: [https://linkedin.com/in/pgarbe](https://linkedin.com/in/pgarbe)  
+GitHub: [https://github.com/pgarbe](https://github.com/pgarbe)  
 
 
 *The thoughts and comments expressed in my blog posts are my own and not my employer´s.*
