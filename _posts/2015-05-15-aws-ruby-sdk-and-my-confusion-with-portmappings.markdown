@@ -24,7 +24,7 @@ If I had started with Ruby directly I would maybe never run into that situation 
 
     aws ecs register-task-definition --cli-input-json file://<path_to_json_file>/hubot_task_definiton.json
 
-Based on that I [started](pgarbe.github.io/blog/2015/05/11/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-2/) with the automation and reused my existing task definiton file.
+Based on that I [started](http://garbe.io/blog/2015/05/11/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-2/) with the automation and reused my existing task definiton file.
 
     ecs.register_task_definition(family: "HuBot", container_definitions: JSON.parse(taskDefintion))
 

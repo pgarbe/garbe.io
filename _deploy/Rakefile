@@ -9,11 +9,19 @@ require "jekyll"
 # Change your GitHub reponame
 GITHUB_REPONAME = "pgarbe/garbe.io"
 
+desc "Serve blog"
+task :serve do
+  Jekyll::Site.new(Jekyll.configuration({
+    "source"      => "..",
+    "destination" => "_site"
+  })).render
+end
+
 
 desc "Generate blog files"
 task :generate do
   Jekyll::Site.new(Jekyll.configuration({
-    "source"      => ".",
+    "source"      => "..",
     "destination" => "_site"
   })).process
 end

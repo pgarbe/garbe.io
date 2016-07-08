@@ -10,7 +10,7 @@ keywords: "Docker, AWS ECS, EC2 Container Service, HuBot, CircleCI"
 description: "Continuous delivery and deployment of a docker container to AWS EC2 Container Services ECS"
 
 ---
-In [part 1](http://pgarbe.github.io/blog/2015/03/24/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-1/) I explained how to run HuBot inside a Docker container. Now I'll show you how to set up a continuous deployment pipeline in order to deploy docker images automatically to AWS EC2 Container Services (ECS).
+In [part 1](http://garbe.io/blog/2015/03/24/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-1/) I explained how to run HuBot inside a Docker container. Now I'll show you how to set up a continuous deployment pipeline in order to deploy docker images automatically to AWS EC2 Container Services (ECS).
 
 
 A couple of days after I wrote the previous post ECS became [public available](https://aws.amazon.com/blogs/aws/ec2-container-service-ready-for-production-use/). AWS also introduced support for long-running applications. Even while I don't need the automatic load balancing and scaling to run HuBot the update management of the introduced service scheduler makes deployment very easy.
@@ -59,4 +59,4 @@ With the support of long-running applications ECS feels now mature enough to hav
 
 On the other side it makes a lot of fun to see how fast your code changes can go live and how easy it is to create a new docker-based application and deploy it (automatically).
 
-See [part 3](http://pgarbe.github.io/blog/2015/07/10/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-3/) how to deal with secrets.
+See [part 3](http://garbe.io/blog/2015/07/10/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-3/) how to deal with secrets.

@@ -85,4 +85,4 @@ To run HuBot first build the container and start it. In addition you have to giv
 ### To be continued
 Running HuBot inside a Docker container was just the beginning for me. It's amazing how fast I could start and run it w/out any experience with Docker or nodejs.
 
-The [next blog post](http://pgarbe.github.io/blog/2015/05/11/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-2/) will show how I deploy the container to AWS.
+The [next blog post](http://garbe.io/blog/2015/05/11/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-2/) will show how I deploy the container to AWS.

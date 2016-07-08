@@ -14,4 +14,4 @@ Let me tell you some details about myself. My name is Philipp Garbe and I starte
 
 Since several years now, I work for a great [company](http://www.autoscout24.de) in Munich. We work in very agile teams and I have the freedom to experiment with techniques like CQRS, Event Sourcing and DDD. I also believe that  [Continous Delivery](http://continuousdelivery.com/) (or [Continous Deployment](http://continuousdelivery.com/2010/08/continuous-delivery-vs-continuous-deployment/) if possible) is fundamental for good teams and good products.
 
-So, what´s next? There will be some interesting news in the next weeks. Together with my colleague [Matthias](http://www.matthias-kainer.de) I started a new project that should make releases less painful. I don´t want to spoiler so [subscribe](http://pgarbe.github.io/atom.xml) to this blog and you´ll be updated.
+So, what´s next? There will be some interesting news in the next weeks. Together with my colleague [Matthias](http://www.matthias-kainer.de) I started a new project that should make releases less painful. I don´t want to spoiler so [subscribe](http://garbe.io/atom.xml) to this blog and you´ll be updated.

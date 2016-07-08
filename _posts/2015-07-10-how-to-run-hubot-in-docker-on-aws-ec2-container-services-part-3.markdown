@@ -10,7 +10,7 @@ keywords: "Docker, AWS ECS, EC2 Container Service, HuBot"
 description: "How to store secrets like apikeys, username and passwords of a docker container while using AWS EC2 Container Services ECS"
 ---
 
-In [part 1](http://pgarbe.github.io/blog/2015/03/24/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-1/) I explained how to run HuBot inside a Docker container. [Part 2](http://pgarbe.github.io/blog/2015/05/11/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-2/) was about setting up a continuous deployment pipeline. This part shows you how you could handle your secrets like API Keys, usernames and passwords.
+In [part 1](http://garbe.io/blog/2015/03/24/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-1/) I explained how to run HuBot inside a Docker container. [Part 2](http://garbe.io/blog/2015/05/11/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-2/) was about setting up a continuous deployment pipeline. This part shows you how you could handle your secrets like API Keys, usernames and passwords.
 
 
 ## Hide your secrets
@@ -33,4 +33,4 @@ This command starts a shell and downloads the ```env.sh``` file from my secured 
 
 That's it. With this little trick I can keep my secrets in my secured s3 bucket and I don't have to commit them to my repository. You can find all the sources on my [GitHub repo](https://github.com/pgarbe/tatsu-hubot).
 
-In my [next blog post](http://pgarbe.github.io/blog/2015/08/24/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-4/) I will change my previous implementation of continuous deployment and use CloudFormation to deploy the whole stack. [Subscribe](http://feeds.feedburner.com/pgarbe) to my blog so you won't miss it.
+In my [next blog post](http://garbe.io/blog/2015/08/24/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-4/) I will change my previous implementation of continuous deployment and use CloudFormation to deploy the whole stack. [Subscribe](http://feeds.feedburner.com/pgarbe) to my blog so you won't miss it.

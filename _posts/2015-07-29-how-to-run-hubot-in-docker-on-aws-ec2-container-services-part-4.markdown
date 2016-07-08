@@ -11,7 +11,7 @@ description: "How to deploy docker containers to AWS EC2 Container Services ECS 
 ---
 
 
-You might say that I showed already in the first three parts (see [here](http://pgarbe.github.io/blog/2015/03/24/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-1/), [here](http://pgarbe.github.io/blog/2015/05/11/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-2/) and [here](http://pgarbe.github.io/blog/2015/07/10/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-3/)) how to run HuBot on AWS EC2 Container Services (ECS). That's true but since AWS CloudFormation also supports ECS I wanted to deploy HuBot as a CloudFormation stack.
+You might say that I showed already in the first three parts (see [here](http://garbe.io/blog/2015/03/24/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-1/), [here](http://garbe.io/blog/2015/05/11/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-2/) and [here](http://garbe.io/blog/2015/07/10/how-to-run-hubot-in-docker-on-aws-ec2-container-services-part-3/)) how to run HuBot on AWS EC2 Container Services (ECS). That's true but since AWS CloudFormation also supports ECS I wanted to deploy HuBot as a CloudFormation stack.
 
 
 If you feel confused with all the names (container, cluster, service and so on) have a look to the [ECS component description](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html). I tried to stick on these terms.
