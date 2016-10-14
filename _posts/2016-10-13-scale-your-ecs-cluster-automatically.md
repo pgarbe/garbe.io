@@ -145,10 +145,11 @@ Threshold = 75%
 We calculated the threshold now only for memory but normally would need to do that for CPU as well. And the lower number of these two thresholds should be used. 
 
 ### What's next?
-When I started this blog post I also wanted to describe what needs to be considered to automatically scale down an ECS cluster. I did not expect that scaling up is such a big topic and therefore I decided to split it up and write another blog post for scaling down. 
+My origin plan was to write about up scaling *and* downscaling. But I did not expect that upscaling is such a big topic and therefore I decided to split it up and write another blog post about downscaling. 
 
-You maybe asked yourself also: What happens to my running tasks when the cluster scales up and down? I consciously avoided `Scheduling` in this blog post because it's a topic by its own.
+You maybe asked yourself also what happens to my running tasks when the cluster scales up and down? I consciously avoided 'scheduling' in this blog post because it's a topic by its own.
 
 If you want to try it out by yourself have a look on my [GitHub repository](https://github.com/pgarbe/ecs-autoscaling) which contains the example code.
 
+I love feedback, so let me know what you think.
 
