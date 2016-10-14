@@ -12,7 +12,7 @@ Philipp Garbe works as Lead Software Developer at [AutoScout24](https://www.auto
 
 Philipp is driven by technologies and tools that allows him to release faster and more often. He expects that every commit automatically goes into production and it shouldn't surprise that he's excited about microservices, docker and the cloud. Affected by Pain Driven Development, he believes that things needs to be changed whenever the pain is big enough.
 
-// <img src="/assets/captain.jpg" alt="Docker Captain" style="float: right; width: 200px;"/>
+<img src="/assets/captain.png" alt="Docker Captain" style="float: right; width: 200px;"/>
 
 ## Contact
 Email: [blog@garbe.io](mailto:blog@garbe.io)  
