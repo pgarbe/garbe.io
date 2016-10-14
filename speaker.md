@@ -9,6 +9,25 @@ published: true
 keywords: "Developer Week, DWX, AWS Summit, Agile World, CQRS, Event Sourcing, AutoScout24"
 ---
 
+# Upcoming talks
+### [2016-12-06 - Devops Conference, München](https://devopsconference.de/session/deliver-docker-containers-continuously-on-aws/)
+#### Deliver Docker Containers continuously on AWS
+With Docker it became easy to start applications locally without installing any dependencies. Even running a local cluster is not a big thing anymore. AWS on the other side offers with ECS a managed container service that states to schedule containers based on resource needs, isolation policies and availability requirements. But what happens between? Is it really that easy? In this talk you’ll see which existing services can already be used to deploy your containers automatically and what still needs to be done to get them running on AWS.
+
+### [2016-11-24 - elastic on tour, Frankfurt](https://www.elastic.co/elasticon/tour/2016/frankfurt-en)
+#### to be announced
+
+### [2016-11-03 - ContainerConf, Mannheim](http://www.containerconf.de/lecture.php?id=5191)
+#### Docker-Container automatisiert nach AWS deployen
+Mit Docker ist es einfach geworden, Applikationen lokal zu starten, ohne zusätzliche Abhängigkeiten installieren zu müssen. Einen Cluster auf seinem eigenen Rechner laufen zu lassen ist kein großes Ding mehr. Mit ECS bietet AWS einen Container-Management-Service für die Cloud an, der verspricht, Container entsprechend ihrem Ressourcenbedarf und Verfügbarkeitserfordernissen automatisch im Cluster zu platzieren.
+
+Aber was passiert dazwischen? Und ist es wirklich so einfach? 
+
+In diesem Talk werden wir betrachten, welche existierenden Services von AWS verwendet werden können, um Container automatisch zu deployen, und was zusätzlich alles benötigt wird, um sie im Betrieb laufen zu lassen. 
+
+
+# Older talks
+
 ### [2015-12-03 - goto, Berlin](http://gotocon.com/berlin-2015/presentation/AutoScout24:%20How%20the%20Cloud%20Makes%20us%20More%20Agile)
 
 #### AutoScout24: How the Cloud Makes us More Agile
