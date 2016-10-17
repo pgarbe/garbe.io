@@ -1,7 +1,9 @@
 # External gems
 # See http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html for making `jekyll archives` work.
+
+gem jekyll-archives, git: https://github.com/jekyll/jekyll-archives/
 gems:
-  - jekyll-archives
+  # - jekyll-archives, git: https://github.com/jekyll/jekyll-archives/
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-gist
@@ -43,13 +45,17 @@ jekyll-archives:
   permalinks:
     category: '/category/:name/'
 
-# Category descriptions (for archive pages)
-descriptions:
-  - cat: Docker
-    desc: "Posts describing Jekyll setup techniques."
+# # Category descriptions (for archive pages)
+# descriptions:
+#   - cat: Docker
+#     desc: "Posts describing Jekyll setup techniques."
 
-  - cat: dummy
-    desc: "Just some placeholder posts, lorem ipsum and the rest."
+#   - cat: AWS
+#     desc: "Just some placeholder posts, lorem ipsum and the rest."
+
+#   - cat: ECS
+#     desc: "Just some placeholder posts, lorem ipsum and the rest."
+
 
 # Disqus comments
 disqus_shortname: pgarbe

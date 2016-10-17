@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Docker on ECS: Scale your cluster automatically"
-date: 2016-10-13 13:15:29 +0100
+date: 2016-10-17 10:15:29 +0100
 author: Philipp Garbe
 comments: true
 published: true
-# categories: [AWS, ECS]
+# categories: [AWS, ECS, Docker]
 keywords: "AWS, ECS, AutoScaling, ASG, Docker, Container"
 description: "How to setup an ECS cluster to scale automatically"
 ---
@@ -15,7 +15,7 @@ When you run an ECS cluster in production it happens that the cluster becomes to
 > (source: unknown)
 
 ### AutoScaling Group 
-EC2 instances can be grouped inside a AutoScaling Group which adds or removes instances automatically based on CloudWatch metrics. This also applies to `container instances` of ECS. Container instances are basically EC2 machines with Docker and ECS-Agent installed. 
+EC2 instances can be grouped inside an AutoScaling Group which adds or removes instances automatically based on CloudWatch metrics. This also applies to container instances of ECS. Container instances are basically EC2 machines with Docker and ECS-Agent installed. 
 
 ![ECS cluster with autoscaling group](/assets/ecs-autoscaling.png)
 *ECS cluster and AutoScaling Group*
@@ -32,7 +32,7 @@ AWS provides four CloudWatch metrics for your cluster:
 * CPU Reservation
 * Memory Reservation
 
-The CPU/Memory utilization tells you how much your hardware is used. The CPU/Memory reservation metrics are based on the settings that you've defined in your [task definition](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definition_environment). For auto scaling the utilization metrics are not useful because ECS starts new tasks only when there is enough capacity based on reserved CPU or memory.
+The CPU/Memory utilization tells you how much of your hardware is actually used. The CPU/Memory reservation metrics are based on the settings that you've defined in your [task definition](http://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definition_parameters.html#container_definition_environment). For auto scaling the utilization metrics are not useful because ECS starts new tasks only when there is enough capacity based on reserved CPU or memory.
 
 To demonstrate the behavior assume we have only one container instance with 4 CPU cores and 4096 MB memory. The task we want to start needs 1500 CPU units (1024 CPU Units = 1 Core) and 768 MB memory.
 
@@ -47,7 +47,7 @@ The 3rd instance of our task can't be scheduled because there is already 72% of 
 > Only reserved capacity is considered by the ECS scheduler. 
 
 ### Scaling up
-Scaling up means adding new container instances to the cluster in order to provide more capacity. In this case both reservation metrics can be used. The ECS cluster can be increased when either reserved CPU is for example greater 80% *or* the reserved memory is greater 80%. The configuration itself is straight forward. 
+Scaling up means adding new container instances to the cluster in order to provide more capacity. In this case, both reservation metrics can be used. The ECS cluster can be increased when either reserved CPU is, for example, greater 80% *or* the reserved memory is greater 80%. The configuration itself is straightforward. 
 
 {% highlight yaml %}
   CPUReservationScaleUpPolicy:
@@ -91,7 +91,7 @@ The AutoScaling Group will not be triggered. Even if it would be triggered, it h
 
 
 #### Example 2
-Let's change our setup. In this example we have an ECS cluster starting with one container instance which has 2048 MB Memory. Our task needs 512 MB memory. We want to scale up when the reserved memory capacity is greater than 70%. 
+Let's change our setup. In this example, we have an ECS cluster starting with one container instance which has 2048 MB Memory. Our task needs 512 MB memory. We want to scale up when the reserved memory capacity is greater than 70%. 
 
 |# of Tasks  |# of Container Instances  |Reserved Memory before   |Memory needed  |Reserved Memory after  | What happens        |
 |--          |--                        |--                       |--             |--                     |--                   |
@@ -113,39 +113,43 @@ In order to have a better utilization of our cluster lets change our scaling pol
 |2           |1                         |50% (1024 MB)            |512 MB         |75% (1536 MB)          | Task is scheduled       |
 |3           |1                         |75% (1536 MB)            |512 MB         |                       | Task can't be scheduled |
 
-When ECS tries to start a task it checks if the cluster has enough capacity to handle the task. In this example there is not enough capacity to start the 4th task. Unfortunately, the reserved CPU/memory metrics return only the current state and they do not include the reserved CPU/memory of the task we want to start. Therefore the metrics are still unchanged and the AutoScaling Group doesn't get triggered. 
+When ECS tries to start a task it checks if the cluster has enough capacity to handle the task. In this example, there is not enough capacity to start the 4th task. Unfortunately, the reserved CPU/memory metrics return only the current state and they do not include the reserved CPU/memory of the task we want to start. Therefore the metrics are still unchanged and the AutoScaling Group doesn't get triggered. 
 
 
 #### Example 4
-Maybe you say one instance is not a real example. What about 100 instances? Each of the instance has again 2048 MB memory and we want to scale up when the reserved memory capacity is greater than 80%.
+Maybe you say one instance is not a real example. What about 100 instances? Each of the instances has again 2048 MB memory and we want to scale up when the reserved memory capacity is greater than 80%. Let's see how many tasks can be started
+100 * 2048mb = 204,800mb
 
 |# of Tasks  |# of Container Instances  |Reserved Memory before   |Memory needed  |Reserved Memory after  | What happens            |
 |--          |--                        |--                       |--             |--                     |--                       |
-|0           |100                       |0% (0 MB)                |512 MB         |00% (512 MB)           | Task is scheduled       |
-|1           |100                       |0% (512 MB)              |512 MB         |25% (512 MB)           | Task is scheduled       |
-|50          |100                       |0% (0 MB)                |512 MB         |00% (... MB)           | Task is scheduled       |
-|??          |100                       |0% (0 MB)                |512 MB         |00% (... MB)           | Task can't be scheduled |
+|0           |100                       |0% (0 MB)                |512 MB         |0,25% (512 MB)         | Task is scheduled       |
+|1           |100                       |0,25% (512 MB)           |512 MB         |0,50% (1024 MB)        | Task is scheduled       |
+|30          |100                       |0,50% (1024 MB)          |512 MB         |7,50% (15,360 MB)      | Task is scheduled       |
+|90          |100                       |7,50% (15,360 MB)        |512 MB         |22,50% (46,080 MB)     | Task is scheduled       |
+|150         |100                       |22,50% (46,080 MB)       |512 MB         |37,50% (76,800 MB)     | Task is scheduled       |
+|300         |100                       |37,50% (76,800 MB)       |512 MB         |75,00% (153,600 MB)    | Task is scheduled       |
+|301         |100                       |75,00% (153,600 MB)      |512 MB         |75,00% (153,600 MB)    | Task can't be scheduled |
 
 Again our cluster does not automatically scale. Like in example 3 the task can't be scheduled because no single container instance can provide the needed capacity. 
 
-> I know that these examples are theoretical because normally you don't have such a even distribution. My intention is to bring awareness which metrics needs to be considered and how to interpret them. Of course there will be some edge-cases which are dependent on your usage of the cluster.
+> I know that these examples are theoretical because normally you don't have such an even distribution. My intention is to bring awareness which metrics needs to be considered and how to interpret them. 
 
 #### Rule of thumb
-In the end the size of your cluster is not important for your AutoScaling policies. Important is the maximum memory or CPU of any of your tasks (containers) and the capacity of one of your container instances (basically the ec2 instance type). Based on that you can calculate the percentage when you have to scale your cluster. 
+In the end, the size of your cluster is not important for your AutoScaling policies. Important is the maximum memory or CPU of any of your tasks (containers) and the capacity of one of your container instances (basically the ec2 instance type). Based on that you can calculate the percentage when you have to scale your cluster. 
 
 > Threshold = (1 -  max(Container Reservation) / Total Capacity of a Single Container Instance) * 100 
 
 Now we can calculate the threshold for the examples above:
 Container instance capacity: 2048 MB  
 Maximum of container reservation: 512 MB  
-  
+
 Threshold = (1 - 512 / 2048) * 100 
 Threshold = 75%
 
 We calculated the threshold now only for memory but normally would need to do that for CPU as well. And the lower number of these two thresholds should be used. 
 
 ### What's next?
-My origin plan was to write about up scaling *and* downscaling. But I did not expect that upscaling is such a big topic and therefore I decided to split it up and write another blog post about downscaling. 
+My origin plan was to write about upscaling *and* downscaling. But I did not expect that upscaling is such a big topic and therefore I decided to split it up and write another blog post about downscaling. 
 
 You maybe asked yourself also what happens to my running tasks when the cluster scales up and down? I consciously avoided 'scheduling' in this blog post because it's a topic by its own.
 
