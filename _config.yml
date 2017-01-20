@@ -2,6 +2,7 @@
 # See http://ixti.net/software/2013/01/28/using-jekyll-plugins-on-github-pages.html for making `jekyll archives` work.
 
 gem jekyll-archives, git: https://github.com/jekyll/jekyll-archives/
+
 gems:
   # - jekyll-archives, git: https://github.com/jekyll/jekyll-archives/
   - jekyll-sitemap
@@ -15,8 +16,8 @@ exclude:
 # Theme: http://jekyllthemes.io/theme/33901899/centrarium
 
 # Site settings
-title: Philipp&#180;s Blog
-subtitle: Living in Bavaria. Working in the Cloud.
+title: Philipps Blog
+subtitle: Living in Bavaria. Working in the Cloud. Docker Captain
 author: Philipp Garbe
 email: blog@garbe.io
 name: Philipp Garbe
@@ -200,7 +201,7 @@ protocols:
 #     fb_image_height: 605
 #     fb_image_type: "image/png"
 #
-    twitter_image: "/assets/philipp.jpg"
+    twitter_image: "/assets/philipp.png"
 #
 #     os_repo: "https://github.com/RichardLitt/wordhoardpress.com"
 #     os_rcs_type: "git"

@@ -342,6 +342,20 @@ pre code.hljs {
 			padding-bottom: 0.5em;
  		}
 	}
+
+	/*
+	* Custom
+	*/
+	blockquote {
+		font-style: italic;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-left: 50px;
+		padding-left: 15px;
+		border-left: 3px solid #ccc;
+
+	}
+	
 }
 
 /*

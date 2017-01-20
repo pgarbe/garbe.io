@@ -6,10 +6,40 @@ comments: false
 sharing: false
 footer: false
 published: true
-keywords: "Developer Week, DWX, AWS Summit, Agile World, CQRS, Event Sourcing, AutoScout24"
+keywords: "Meetup, Developer Week, DWX, AWS Summit, Agile World, CQRS, Event Sourcing, AutoScout24"
 ---
 
 # Upcoming talks
+
+### [2017-01-25 - Docker Meetup, Bochum](https://www.meetup.com/Docker-Bochum/events/236394733/)
+
+#### Running Docker Containers on AWS
+Running containers locally has been made very easy by Docker with tools like Docker for Mac or Windows. But how do you run your containers in the cloud?
+
+In this talk Philipp gives an overview how to get started with Docker Swarm, Docker for AWS and AWS ECS and how your application can get deployed.
+
+
+### [2017-03-07 - QCon, London]()
+
+#### Deliver Docker Containers Continuously on AWS
+With Docker it became easy to start applications locally without installing any dependencies. Even running a local cluster is not a big thing anymore.
+
+AWS on the other side offers with ECS a managed container service that states to schedule containers based on resource needs, isolation policies and availability requirements.
+
+Sounds good, but is it really that easy? In this talk you'll get an overview of ECS and all other services that are needed to run your containers in production. Philipp shows how an ECS cluster and your containerized applications can automatically be deployed and scaled. He also shares his experiences and what features are still missing. 
+
+
+### [2017-06-12 - 15 - DevOps Con, Berlin](https://devopsconference.de/session/deliver-docker-containers-continuously-with-ecs/)
+
+#### Deliver Docker Containers Continuously with ECS
+With Docker it became easy to start applications locally without installing any dependencies. Even running a local cluster is not a big thing anymore.
+
+AWS on the other side offers with ECS a managed container service that states to schedule containers based on resource needs, isolation policies and availability requirements.
+
+Sounds good, but is it really that easy? In this talk you’ll get an overview of ECS and all other services that are needed to run your containers in production. Philipp shows how an ECS cluster and your containerized applications can automatically be deployed and scaled. He also shares his experiences and what features are still missing.
+
+
+# Older talks
 
 ### [2016-12-06 - Devops Conference, München](https://devopsconference.de/session/deliver-docker-containers-continuously-on-aws/)
 
@@ -18,7 +48,9 @@ With Docker it became easy to start applications locally without installing any 
 
 ### [2016-11-24 - elastic on tour, Frankfurt](https://www.elastic.co/elasticon/tour/2016/frankfurt-en)
 
-#### to be announced  
+#### Finding Cars and Hunting Down Logs: Elasticsearch @ AutoScout24
+As an early adopter of Elasticsearch, AutoScout24 has tried it all. In this talk, we'll take you on a journey through both our failures and successes. We'll show how our different use cases required different approaches in how best to use the Elastic Stack.
+
 
 ### [2016-11-03 - ContainerConf, Mannheim](http://www.containerconf.de/lecture.php?id=5191)
 
@@ -30,7 +62,6 @@ Aber was passiert dazwischen? Und ist es wirklich so einfach?
 In diesem Talk werden wir betrachten, welche existierenden Services von AWS verwendet werden können, um Container automatisch zu deployen, und was zusätzlich alles benötigt wird, um sie im Betrieb laufen zu lassen. 
 
 
-# Older talks
 
 ### [2015-12-03 - goto, Berlin](http://gotocon.com/berlin-2015/presentation/AutoScout24:%20How%20the%20Cloud%20Makes%20us%20More%20Agile)
 

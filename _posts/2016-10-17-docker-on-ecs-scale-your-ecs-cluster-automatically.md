@@ -11,7 +11,7 @@ description: "How to setup an ECS cluster to scale automatically"
 ---
 When you run an ECS cluster in production it happens that the cluster becomes too small and it can't schedule new tasks (AWS term for running containers). Of course, you can add new container instances (EC2) but why should you do it manually when you can automate it? On the other side can you also scale down automatically to save money? 
 
-> If you do it twice, automate it.   
+> "If you do it twice, automate it."   
 > (source: unknown)
 
 ### AutoScaling Group 
@@ -83,7 +83,7 @@ The setup of our first example consists of 3 running container instances. Each i
 
 |# of Tasks  |# of Container Instances  |Reserved Memory before   |Memory needed  |Reserved Memory after  | What happens            |
 |--          |--                        |--                       |--             |--                     |--                       |
-|0x          |3x                        |0% (0 MB)                |3096 MB        |                       | Task can't be scheduled |
+|0x          |3x                        |0% (0 MB)                |3096 MB        |                       | __Task can't be scheduled__ |
 
 The AutoScaling Group will not be triggered. Even if it would be triggered, it had no effect. The task can't be scheduled on any of the container instances as no one fulfills the requirement of 3096 MB of memory.
 
@@ -97,7 +97,7 @@ Let's change our setup. In this example, we have an ECS cluster starting with on
 |--          |--                        |--                       |--             |--                     |--                   |
 |0           |1                         |0% (0 MB)                |512 MB         |25% (512 MB)           | Task is scheduled   |
 |1           |1                         |25% (512 MB)             |512 MB         |50% (1024 MB)          | Task is scheduled   |
-|2           |1                         |50% (1024 MB)            |512 MB         |75% (1536 MB)          | Task is scheduled. ASG is scaling up |
+|2           |1                         |50% (1024 MB)            |512 MB         |75% (1536 MB)          | Task is scheduled. __ASG is scaling up__ |
 |3           |2                         |37,5% (1536 MB)          |512 MB         |50% (2048 MB)          | Task is scheduled   |
 
 Now the AutoScaling group gets triggered and starts another container instance.
@@ -111,7 +111,7 @@ In order to have a better utilization of our cluster lets change our scaling pol
 |0           |1                         |0% (0 MB)                |512 MB         |25% (512 MB)           | Task is scheduled       |
 |1           |1                         |25% (512 MB)             |512 MB         |50% (1024 MB)          | Task is scheduled       |
 |2           |1                         |50% (1024 MB)            |512 MB         |75% (1536 MB)          | Task is scheduled       |
-|3           |1                         |75% (1536 MB)            |512 MB         |                       | Task can't be scheduled |
+|3           |1                         |75% (1536 MB)            |512 MB         |                       | __Task can't be scheduled__ |
 
 When ECS tries to start a task it checks if the cluster has enough capacity to handle the task. In this example, there is not enough capacity to start the 4th task. Unfortunately, the reserved CPU/memory metrics return only the current state and they do not include the reserved CPU/memory of the task we want to start. Therefore the metrics are still unchanged and the AutoScaling Group doesn't get triggered. 
 
@@ -120,15 +120,15 @@ When ECS tries to start a task it checks if the cluster has enough capacity to h
 Maybe you say one instance is not a real example. What about 100 instances? Each of the instances has again 2048 MB memory and we want to scale up when the reserved memory capacity is greater than 80%. Let's see how many tasks can be started
 100 * 2048mb = 204,800mb
 
-|# of Tasks  |# of Container Instances  |Reserved Memory before   |Memory needed  |Reserved Memory after  | What happens            |
-|--          |--                        |--                       |--             |--                     |--                       |
-|0           |100                       |0% (0 MB)                |512 MB         |0,25% (512 MB)         | Task is scheduled       |
-|1           |100                       |0,25% (512 MB)           |512 MB         |0,50% (1024 MB)        | Task is scheduled       |
-|30          |100                       |0,50% (1024 MB)          |512 MB         |7,50% (15,360 MB)      | Task is scheduled       |
-|90          |100                       |7,50% (15,360 MB)        |512 MB         |22,50% (46,080 MB)     | Task is scheduled       |
-|150         |100                       |22,50% (46,080 MB)       |512 MB         |37,50% (76,800 MB)     | Task is scheduled       |
-|300         |100                       |37,50% (76,800 MB)       |512 MB         |75,00% (153,600 MB)    | Task is scheduled       |
-|301         |100                       |75,00% (153,600 MB)      |512 MB         |75,00% (153,600 MB)    | Task can't be scheduled |
+|# of Tasks  |# of Container Instances  |Reserved Memory before  |Memory needed  |Reserved Memory after | What happens            |
+|--          |--                        |--                      |--             |--                    |--                       |
+|0           |100                       |0% (0mb)                |512 MB         |0,25% (512mb)         | Task is scheduled       |
+|1           |100                       |0,25% (512mb)           |512 MB         |0,50% (1024mb)        | Task is scheduled       |
+|30          |100                       |0,50% (1024mb)          |512 MB         |7,50% (15,360mb)      | Task is scheduled       |
+|90          |100                       |7,50% (15,360mb)        |512 MB         |22,50% (46,080mb)     | Task is scheduled       |
+|150         |100                       |22,50% (46,080mb)       |512 MB         |37,50% (76,800mb)     | Task is scheduled       |
+|300         |100                       |37,50% (76,800mb)       |512 MB         |75,00% (153,600mb)    | Task is scheduled       |
+|301         |100                       |75,00% (153,600mb)      |512 MB         |75,00% (153,600mb)    | __Task can't be scheduled__ |
 
 Again our cluster does not automatically scale. Like in example 3 the task can't be scheduled because no single container instance can provide the needed capacity. 
 
@@ -137,7 +137,7 @@ Again our cluster does not automatically scale. Like in example 3 the task can't
 #### Rule of thumb
 In the end, the size of your cluster is not important for your AutoScaling policies. Important is the maximum memory or CPU of any of your tasks (containers) and the capacity of one of your container instances (basically the ec2 instance type). Based on that you can calculate the percentage when you have to scale your cluster. 
 
-> Threshold = (1 -  max(Container Reservation) / Total Capacity of a Single Container Instance) * 100 
+> __Threshold = (1 -  max(Container Reservation) / Total Capacity of a Single Container Instance) * 100__ 
 
 Now we can calculate the threshold for the examples above:
 Container instance capacity: 2048 MB  
