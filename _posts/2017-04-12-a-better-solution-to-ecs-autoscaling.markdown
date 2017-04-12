@@ -79,7 +79,7 @@ def lambda_handler(event, context):
     print('Metric was send to CloudWatch')
     return {}
 ```
-
+_(Code provided by [Johannes Müller](https://github.com/joh-m/))_
 
 #### Example: 
 
