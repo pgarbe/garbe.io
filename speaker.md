@@ -11,15 +11,8 @@ keywords: "Meetup, Developer Week, DWX, AWS Summit, Agile World, CQRS, Event Sou
 
 # Upcoming talks
 
-### [2017-01-25 - Docker Meetup, Bochum](https://www.meetup.com/Docker-Bochum/events/236394733/)
 
-#### Running Docker Containers on AWS
-Running containers locally has been made very easy by Docker with tools like Docker for Mac or Windows. But how do you run your containers in the cloud?
-
-In this talk Philipp gives an overview how to get started with Docker Swarm, Docker for AWS and AWS ECS and how your application can get deployed.
-
-
-### [2017-03-07 - QCon, London]()
+### [2017-03-07 - QCon, London](https://qconlondon.com/presentation/deliver-docker-containers-continuously-on-AWS)
 
 #### Deliver Docker Containers Continuously on AWS
 With Docker it became easy to start applications locally without installing any dependencies. Even running a local cluster is not a big thing anymore.
@@ -40,6 +33,14 @@ Sounds good, but is it really that easy? In this talk you’ll get an overview o
 
 
 # Older talks
+
+### [2017-01-25 - Docker Meetup, Bochum](https://www.meetup.com/Docker-Bochum/events/236394733/)
+
+#### Running Docker Containers on AWS
+Running containers locally has been made very easy by Docker with tools like Docker for Mac or Windows. But how do you run your containers in the cloud?
+
+In this talk Philipp gives an overview how to get started with Docker Swarm, Docker for AWS and AWS ECS and how your application can get deployed.
+
 
 ### [2016-12-06 - Devops Conference, München](https://devopsconference.de/session/deliver-docker-containers-continuously-on-aws/)
 
