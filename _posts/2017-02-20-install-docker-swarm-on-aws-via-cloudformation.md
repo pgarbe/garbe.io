@@ -147,6 +147,8 @@ aws cloudformation create-stack  \
 
 Another important difference is related to the fact that worker nodes can join a Swarm cluster only by sending the join-token to a manager node. To get the private IPs of the manager nodes, the script to join the swarm is a bit different. It imports the value of the managers AutoScaling Group and based on that the corresponding EC2 instances can be determined.
 
+{% raw %}
+
 ```yaml
 swarm:
   commands:
@@ -165,10 +167,10 @@ swarm:
           done
       - ASG: 
           'Fn::ImportValue': !Sub '${ParentSwarmStack}-SwarmManagerAutoScalingGroup'
-
     'b_swarm_healthcheck':
       command: '[ -n "$(docker info --format "{{.Swarm.NodeID}}")" ]'
 ```
+{% endraw %}
 Finally, another healtcheck test if the worker node has sucessfully joined our swarm cluster.
 
 ## Summary

@@ -11,6 +11,9 @@ keywords: "Meetup, Developer Week, DWX, AWS Summit, Agile World, CQRS, Event Sou
 
 # Upcoming talks
 
+
+# Older talks
+
 ### [2017-06-12 - 15 - DevOps Con, Berlin](https://devopsconference.de/session/deliver-docker-containers-continuously-with-ecs/)
 
 #### Deliver Docker Containers Continuously with ECS
@@ -19,9 +22,6 @@ With Docker it became easy to start applications locally without installing any 
 AWS on the other side offers with ECS a managed container service that states to schedule containers based on resource needs, isolation policies and availability requirements.
 
 Sounds good, but is it really that easy? In this talk you’ll get an overview of ECS and all other services that are needed to run your containers in production. Philipp shows how an ECS cluster and your containerized applications can automatically be deployed and scaled. He also shares his experiences and what features are still missing.
-
-
-# Older talks
 
 
 ### [2017-03-07 - QCon, London](https://qconlondon.com/presentation/deliver-docker-containers-continuously-on-AWS)

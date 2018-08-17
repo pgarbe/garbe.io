@@ -3,7 +3,7 @@
 
 gem jekyll-archives, git: https://github.com/jekyll/jekyll-archives/
 
-gems:
+plugins:
   # - jekyll-archives, git: https://github.com/jekyll/jekyll-archives/
   - jekyll-sitemap
   - jekyll-paginate
@@ -17,7 +17,7 @@ exclude:
 
 # Site settings
 title: Philipps Blog
-subtitle: Living in Bavaria. Working in the Cloud. Docker Captain
+subtitle: Living in Bavaria. Working in the Cloud. Docker Captain. AWS Cloud Hero
 author: Philipp Garbe
 email: blog@garbe.io
 name: Philipp Garbe
@@ -28,7 +28,7 @@ description: >
 # and never end with a slash. Set it to a blank value if hosting at the
 # root of your server.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://garbe.io" # the base hostname & protocol for your site
+url: "https://garbe.io" # the base hostname & protocol for your site
 cover: "/assets/header_image.jpg"
 # logo: ""
 
@@ -62,7 +62,8 @@ jekyll-archives:
 disqus_shortname: pgarbe
 
 # Google analytics
-ga_tracking_id: "UA-46808769-1"
+# ga_tracking_id: "UA-46808769-1"
+# see https://www.datenschutz.org/google-analytics-datenschutz/
 
 # Social icons and sharing options
 #
