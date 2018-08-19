@@ -1,0 +1,17 @@
+sudo: false
+language: ruby 
+rvm:
+  - 2.4.4
+
+before_install:
+  - sudo apt-get install lftp
+
+
+deploy:
+  - provider: script
+    script: bash jekyll generate
+    on:
+      branch: source
+
+# lftp -e 'mirror -R -v _site public_html; bye' -u $DEPLOY_USER,$DEPLOY_PASS $DEPLOY_SERVER
+
