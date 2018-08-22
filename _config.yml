@@ -12,6 +12,9 @@ plugins:
 exclude:
   - "/vendor/"
   - "posts.html"
+  - "Rakefile"
+  - "Gemfile"
+  - "Gemfile.lock"
 
 # Theme: http://jekyllthemes.io/theme/33901899/centrarium
 
