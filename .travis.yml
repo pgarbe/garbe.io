@@ -9,6 +9,6 @@ before_install:
 deploy:
   skip_cleanup: true
   - provider: script
-    script: ls -l && lftp -e 'mirror -R -v _site public_html; bye' -u $DEPLOY_USER,$DEPLOY_PASS $DEPLOY_SERVER
+    script: lftp -e 'mirror -R -v _site public_html; bye' -u $DEPLOY_USER,$DEPLOY_PASS $DEPLOY_SERVER
     on:
       branch: source
