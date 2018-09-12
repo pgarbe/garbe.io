@@ -8,9 +8,7 @@ before_install:
 
 deploy:
   - provider: script
-    script: bash lftp -e 'mirror -R -v _site public_html; bye' -u $DEPLOY_USER,$DEPLOY_PASS $DEPLOY_SERVER
+    script: lftp -e 'mirror -R -v _site public_html; bye' -u $DEPLOY_USER,$DEPLOY_PASS $DEPLOY_SERVER
     on:
       branch: source
-
-# lftp -e 'mirror -R -v _site public_html; bye' -u $DEPLOY_USER,$DEPLOY_PASS $DEPLOY_SERVER
 
