@@ -46,3 +46,24 @@ Here is how it should look at the end:
   ]
 }
 ```
+
+__Update:__ It's also supported in CloudFormation now. In this example, the ${FileSystem} points to an [EFS FileSystem](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html). 
+
+> Please note, that CloudFormation force you to define a `Label`, even while the docs says it's [not required](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-dockervolumeconfiguration.html#cfn-ecs-taskdefinition-dockervolumeconfiguration-labels).
+
+```yaml
+TaskDefinition:
+  Type: AWS::ECS::TaskDefinition
+  Properties:
+    Volumes:
+      - Name: jenkins_home
+        DockerVolumeConfiguration:
+          Driver: local
+          DriverOpts:
+            type: nfs
+            device: !Sub "${FileSystem}.efs.${AWS::Region}.amazonaws.com:/"
+            o: !Sub "addr=${FileSystem}.efs.${AWS::Region}.amazonaws.com,nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+          Labels:
+            foo: bar
+          Scope: task
+```
