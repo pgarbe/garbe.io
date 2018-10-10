@@ -39,7 +39,7 @@ Here is how it should look at the end:
         "driverOpts": {
           "type": "nfs",
           "device": "fs-1234abcd.efs.eu-west-1.amazonaws.com:/",
-          "o": "addr=fs-1234abcd.efs.eu-west-1.amazonaws.com,nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+          "o": "addr=fs-1234abcd.efs.eu-west-1.amazonaws.com,nfsvers=4.0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
         }
       }
     }
@@ -62,8 +62,18 @@ TaskDefinition:
           DriverOpts:
             type: nfs
             device: !Sub "${FileSystem}.efs.${AWS::Region}.amazonaws.com:/"
-            o: !Sub "addr=${FileSystem}.efs.${AWS::Region}.amazonaws.com,nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
+            o: !Sub "addr=${FileSystem}.efs.${AWS::Region}.amazonaws.com,nfsvers=4.0,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2"
           Labels:
             foo: bar
           Scope: task
 ```
+
+
+__Update 2:__   
+There's a kernel bug which hasn't been fixed in the ECS optimized AMI (tested with 2018.03.g). This leads to a deadlock when you start multiple tasks with an nfs volume at the same time (e.g. when updating the cluster). 
+
+The workaround is to use the nfs version 4.0 instead of 4.1 (I updated the snippets above)
+
+For more information see:  
+  * [https://www.spinics.net/lists/linux-nfs/msg66321.html](https://www.spinics.net/lists/linux-nfs/msg66321.html)
+  * [https://bugzilla.redhat.com/show_bug.cgi?id=1506382](https://bugzilla.redhat.com/show_bug.cgi?id=1506382)
