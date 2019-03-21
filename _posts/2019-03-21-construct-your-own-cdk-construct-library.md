@@ -25,28 +25,32 @@ I'm new to TypeScript and CDK and still learning. Let me know if things can be d
 ## Using LernaJS
 [LernaJS](https://lernajs.io/) is made to handle repositories with multiple npm packages. It creates releases, optimizes dependencies and can run the same npm commands for all packages.
 
-There are just a few steps to initialize a new project with necessary files and folders:
+There are just a few steps to initialize a new project with the necessary files and folders:
 
 ```bash
 # Install lerna globally
 npm install --global lerna
 
 # Create new directory
-mkdir my-cdk-library && cd $_
+mkdir my-cdk-library
 
 # Initialize current directory
 lerna init
+
+# Create new package and initialize it as CDK lib
+cd packages && mkdir cdk-example  && cd $_
+cdk init lib --language=typescript
 ```
 
 > See Lerna [docs](https://github.com/lerna/lerna) for more information.
 
-Lerna is intended to work with JavaScript and not TypeScript. But as you will see later, we need TypeScript. So read [this blog post](https://blog.logrocket.com/setting-up-a-monorepo-with-lerna-for-a-typescript-project-b6a81fe8e4f8), which explains how to use LernaJS with TypeScript  (but skip the publishing part, as this will be a bit different for CDK libs)..
+Lerna is intended to work with JavaScript and not TypeScript. But as you will see later, we need TypeScript. So read [this blog post](https://blog.logrocket.com/setting-up-a-monorepo-with-lerna-for-a-typescript-project-b6a81fe8e4f8), which explains how to use LernaJS with TypeScript  (but skip the publishing part, as this will be a bit different for CDK libs).
 
 I'm skipping now the part how to [write your own Constructs](https://docs.aws.amazon.com/CDK/latest/userguide/writing_constructs.html) and continue with tests.
 
 
 ## Unit Tests
-Compared to "classic" CloudFormation, CDK makes it easy to write tests. Especially, for shared Constructs it makes totally sense to have automated tests to ensure that specific resources are created with correct values. Tests can also document *why* a certain code is like it is.
+Compared to "classic" CloudFormation, CDK makes it easy to write tests. Especially, for shared Constructs, it makes total sense to have automated tests to ensure that specific resources are created with correct values. Tests can also document *why* a certain code is like it is.
 
 With `@aws-cdk/assert`, the CDK team provides a handy library to simplify asserts. Install it together with nodeunit as a dev dependency:
 
@@ -97,7 +101,7 @@ A good practice is to lint your code. It helps to make it more readable and easi
 Install [tslint](https://palantir.github.io/tslint/) and initialize it in every package folder.
 
 ```bash
-# Install tslint as dev dependency
+# Install tslint as a dev dependency
 npm install tslint typescript --save-dev
 
 # Create tsconfig.json in each package folder
@@ -116,11 +120,11 @@ In `package.json` of each package, add a `lint` script:
 
 The CDK team itself is using an additional tool called [awslint](https://github.com/awslabs/aws-cdk/tree/master/tools/awslint), which is linting the CDK libraries against their own guidelines ([AWS Resource Construct Design Guidelines](https://github.com/awslabs/aws-cdk/blob/master/design/aws-guidelines.md)).
 
-Unfortunately, awslint can not be used to check your own libraries, but there's already an [issue](https://github.com/awslabs/aws-cdk/issues/1942) to make it public available. 
+Unfortunately, awslint cannot be used to check your own libraries, but there's already an [issue](https://github.com/awslabs/aws-cdk/issues/1942) to make it publicly available. 
 
 
-## Multi language support
-What makes CDK unique is that it can be used in the language of your choice. If you also want to publish your Constructs for different languages, all you have to do is to replace the `ts` compiler with [jsii](https://github.com/awslabs/jsii/). Jsii calls internaly the ts compiler to build and also watch code changes. But the `package` command will generate and compile your package to all specified target languages. The output packages will be emitted to `outdir`.
+## Multi-language support
+What makes CDK unique is that it can be used in the language of your choice. If you also want to publish your Constructs for different languages, all you have to do is to replace the `ts` compiler with [jsii](https://github.com/awslabs/jsii/). Jsii calls internally the ts compiler to build and also watch code changes. But the `package` command will generate and compile your package to all specified target languages. The output packages will be emitted to `outdir`.
 
 First, install the necessary packages as dev dependencies:
 ```bash
@@ -169,7 +173,7 @@ The last piece is an automated pipeline to ensure that everything compiles, your
 
 So what could be better to publish a CDK construct than another CDK construct?
 
-The pipeline will be stored in a new folder (e.g. "pipeline") and needs to be deployed separately. The folder contains a few files which are described below. The idea of the pipeline is to build, test, lint and package your libarary. And if the specified version is not published it can publish the packages to all configured package managers.
+The pipeline will be stored in a new folder (e.g. "pipeline") and needs to be deployed separately. The folder contains a few files which are described below. The idea of the pipeline is to build, test, lint and package your library. And if the specified version is not published it can publish the packages to all configured package managers.
 
 The first file is a `package.json` which contains some useful scripts.
 ```json
@@ -262,4 +266,4 @@ It took me a while to set up the basic pieces to be able to write and publish my
 
 I hope this guide helps you a bit. Please, don't be afraid and share your feedback with me.
 
-Currently, there's a lack of overview what CDK Constructs in the community exists. Hopefully, this will change in the near future. In the meantime, a good starting point is [Awesome CDK](https://github.com/eladb/awesome-cdk), a "curated list of awesome projects related to the CDK. 
+Currently, there's a lack of overview of what CDK Constructs in the community exists. Hopefully, this will change in the near future. In the meantime, a good starting point is [Awesome CDK](https://github.com/eladb/awesome-cdk), a "curated list of awesome projects related to the CDK. 
