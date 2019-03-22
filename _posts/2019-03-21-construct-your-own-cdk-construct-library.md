@@ -61,30 +61,36 @@ With `@aws-cdk/assert`, the CDK team provides a handy library to simplify assert
 npm i --save-dev jest @types/jest ts-jest @aws-cdk/assert
 ```
 
-A test can look like this and is placed in a `test.*.ts` file inside the test subfolder of your package:
+Create a `jest.config.js` file to configure Jest to use TypeScript settings.
+
+```js
+module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+}
+```
+
+A test can look like this and is placed in any `*.ts` file inside the `__tests__` subfolder of your package:
 
 ```typescript
 import { expect, haveResource } from '@aws-cdk/assert';
 ...
 
-export = {
-  'test fargate cluster construct'(test: Test) {
-    // GIVEN
-    const stack = new cdk.Stack();
-    const vpc = new ec2.VpcNetwork(stack, 'VPC');
+test('test fargate cluster construct', () => {
+  // GIVEN
+  const stack = new cdk.Stack();
+  const vpc = new ec2.VpcNetwork(stack, 'VPC');
 
-    // WHEN
-    new fc.FargateCluster(stack, 'Service', {
-      vpc
-    });
+  // WHEN
+  new fc.FargateCluster(stack, 'Service', {
+    vpc
+  });
 
-    // THEN - stack contains a public load balancer as default
-    expect(stack).to(haveResource('AWS::ElasticLoadBalancingV2::LoadBalancer', {
-      Scheme: "internet-facing"
-    }));
-
-    test.done();
-  }
+  // THEN - stack contains a public load balancer as default
+  expect(stack).to(haveResource('AWS::ElasticLoadBalancingV2::LoadBalancer', {
+    Scheme: "internet-facing"
+  }));
+});
 ```
 
 In your root `package.json` add a `test` script. You can run your tests with `npm run test`.
