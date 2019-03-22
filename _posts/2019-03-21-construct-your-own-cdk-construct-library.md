@@ -8,8 +8,8 @@ published: true
 # categories: [AWS]
 keywords: "AWS, CDK, CloudFormation, Construct"
 description: "Construct your own CDK Construct Library"
+cover: /assets/cdk-construct-library.png
 ---
-
 
 
 As I wrote in the [AWS Blog](https://aws.amazon.com/blogs/aws/boost-your-infrastructure-with-cdk/), the biggest advantage of the AWS CDK for me is that you can write your own Constructs and then easily share them using existing package managers. This guide should help you to set up your own CDK Library and how to share your Constructs.
@@ -20,6 +20,9 @@ I took the official [AWS CDK](https://github.com/awslabs/aws-cdk) repo is an ins
 I'm new to TypeScript and CDK and still learning. Let me know if things can be done better or more easily in my examples.  
 > 
 > This article is not a step-by-step guideline but focus on the important parts.
+
+
+![CDK Constuct Library](/assets/cdk-construct-library.png)
 
 
 ## Using LernaJS
@@ -55,7 +58,7 @@ Compared to "classic" CloudFormation, CDK makes it easy to write tests. Especial
 With `@aws-cdk/assert`, the CDK team provides a handy library to simplify asserts. Install it together with nodeunit as a dev dependency:
 
 ```bash
-npm i --save-dev nodeunit @aws-cdk/assert
+npm i --save-dev jest @types/jest ts-jest @aws-cdk/assert
 ```
 
 A test can look like this and is placed in a `test.*.ts` file inside the test subfolder of your package:
