@@ -55,7 +55,7 @@ I'm skipping now the part how to [write your own Constructs](https://docs.aws.am
 ## Unit Tests
 Compared to "classic" CloudFormation, CDK makes it easy to write tests. Especially, for shared Constructs, it makes total sense to have automated tests to ensure that specific resources are created with correct values. Tests can also document *why* a certain code is like it is.
 
-With `@aws-cdk/assert`, the CDK team provides a handy library to simplify asserts. Install it together with nodeunit as a dev dependency:
+With `@aws-cdk/assert`, the CDK team provides a handy library to simplify asserts. Install it together with jest as a dev dependency:
 
 ```bash
 npm i --save-dev jest @types/jest ts-jest @aws-cdk/assert
@@ -87,13 +87,13 @@ export = {
   }
 ```
 
-In `package.json` of each package, add a `test` script. You can run your tests with `lerna run test`.
+In your root `package.json` add a `test` script. You can run your tests with `npm run test`.
 
 ```json
 {
   "scripts": {
     ...
-    "test": "nodeunit ./test",
+    "test": "jest",
   }
 ```
 
