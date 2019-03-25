@@ -91,7 +91,7 @@ test('test fargate cluster construct', () => {
 });
 ```
 
-In your root `package.json` add a `test` script. You can run your tests with `npm run test`.
+In your root `package.json` add a `test` script so you can run your tests with `npm run test`.
 
 ```json
 {
