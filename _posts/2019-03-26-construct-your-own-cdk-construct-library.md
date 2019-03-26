@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Construct your own CDK Construct Library"
-date: 2019-03-25 09:30:29 +0200
+date: 2019-03-26 07:30:29 +0200
 author: Philipp Garbe
 comments: true
 published: true
