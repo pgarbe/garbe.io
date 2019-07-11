@@ -8,7 +8,7 @@ footer: false
 
 <img src="/assets/philipp.png" alt="Philipp Garbe" style="float: right; width: 200px;"/>
 
-Philipp works as Platform Architect at [RIO - The Logistics Group](https://rio.cloud/). Prior to that, he was part of "Tatsu", a project that transformed the matured AutoScout24 IT setup into a nextgen Web-Scale IT platform. After that he created a cutting-edge cloud experience for Scout's builder teams through automated tooling and products
+Philipp works as Platform Architect at [RIO - The Logistics Group](https://rio.cloud/). Prior to that, he was part of "Tatsu", a project that transformed the matured AutoScout24 IT setup into a nextgen Web-Scale IT platform. After that he created a cutting-edge cloud experience for Scout24's builder teams through automated tooling and products
 
 He is driven by technologies and tools that allow him to deliver and release faster and more often. He expects that every commit automatically goes into production so it shouldn't be a surprise that he's excited about microservices, containers and cloud-native technologies. Affected by Pain Driven Development, he believes that things need to be changed whenever the pain is big enough.
 
