@@ -5,7 +5,7 @@ date: 2018-09-12 09:30:29 +0200
 author: Philipp Garbe
 comments: true
 published: true
-# categories: [AWS]
+categories: [AWS, ECS]
 keywords: "AWS, ECS, Volume, EFS"
 description: "The easiest way to use EFS volumes with ECS"
 ---

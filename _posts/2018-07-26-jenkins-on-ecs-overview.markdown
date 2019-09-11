@@ -5,7 +5,7 @@ date: 2018-07-26 07:30:29 +0200
 author: Philipp Garbe
 comments: true
 published: true
-# categories: [AWS]
+categories: [AWS, ECS]
 keywords: "AWS, ECS"
 description: "Run Jenkins on Amazon ECS using Docker containers"
 ---

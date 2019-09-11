@@ -5,7 +5,7 @@ date: 2018-08-17 09:30:29 +0200
 author: Philipp Garbe
 comments: true
 published: true
-# categories: [AWS]
+categories: [AWS, CDK]
 keywords: "AWS, CloudFormation, CDK"
 description: "First look into AWS Cloud Development Kit (CDK)"
 ---

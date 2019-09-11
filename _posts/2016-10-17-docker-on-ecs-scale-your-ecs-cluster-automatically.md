@@ -5,7 +5,7 @@ date: 2016-10-17 10:15:29 +0100
 author: Philipp Garbe
 comments: true
 published: true
-# categories: [AWS, ECS, Docker]
+categories: [AWS, ECS]
 keywords: "AWS, ECS, AutoScaling, ASG, Docker, Container"
 description: "How to setup an ECS cluster to scale automatically"
 ---

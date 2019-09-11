@@ -5,7 +5,7 @@ date: 2017-07-17 09:30:29 +0200
 author: Philipp Garbe
 comments: true
 published: true
-# categories: [AWS]
+categories: [AWS]
 keywords: "AWS, CloudFormation"
 description: "CloudFormation hacks beyond the typical hello world"
 ---

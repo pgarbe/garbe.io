@@ -4,7 +4,7 @@ title: "3, 2, 1, 0 - How many integration environments do you need?"
 date: 2016-04-11 04:22:08 +0000
 author: Philipp Garbe
 comments: true
-# categories: [Docker, Continuous Delivery]
+categories: [Continuous-Delivery]
 keywords: "Continuous Deployment, Continuous Delivery, Integration Environments"
 description: "How many integration environments do you need? The less environments you have the faster your releases are."
 

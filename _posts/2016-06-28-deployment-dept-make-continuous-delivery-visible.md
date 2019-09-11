@@ -5,7 +5,7 @@ date: 2016-06-28 09:15:29 +0200
 author: Philipp Garbe
 comments: true
 published: true
-# categories: [Continuous Delivery]
+categories: [Continuous-Delivery]
 keywords: "Continuous Delivery, Continuous Deployment, Deployment Debt, Technical Debt"
 description: "Definition of Deployment Debt and what it means to Continuous Delivery"
 ---

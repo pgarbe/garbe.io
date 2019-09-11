@@ -5,7 +5,7 @@ date: 2017-04-12 07:30:29 +0200
 author: Philipp Garbe
 comments: true
 published: true
-# categories: [AWS, Docker, ECS]
+categories: [AWS, ECS]
 keywords: "AWS, ECS, Docker, auto scaling"
 description: "Scale your ECS cluster automatically and effectively without pains"
 ---
