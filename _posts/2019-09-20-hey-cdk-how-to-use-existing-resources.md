@@ -14,11 +14,12 @@ cover: /assets/heycdk.png
 After seeing some demos or trying out the [AWS Cloud Development Kit (CDK)](https://aws.amazon.com/cdk/), many questions arise. How can I migrate? What's about my existing resources? What is the Context about? And so on.
 
 This is the second part of a series 'Hey CDK'
-- [How can I migrate my existing CloudFormation templates into CDK?](https://garbe.io/blog/2019/09/11/hey-cdk-how-to-migrate/)
-- How can I reference existing resources in CDK?
+- [How can I migrate my existing CloudFormation templates?](/blog/2019/09/11/hey-cdk-how-to-migrate/)
+- How can I reference existing resources?
+- [How can I write even less code?](/blog/2019/10/01/hey-cdk-how-to-write-less-code/)
 
 
-### How can I reference existing resources in CDK?
+### How can I reference existing resources?
 
 Most of the time it's necessary to reference existing resources which have already been created in your AWS account. Either by another CloudFormation Stack or by another CDK App.
 

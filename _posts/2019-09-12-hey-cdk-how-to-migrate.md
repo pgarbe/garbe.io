@@ -15,7 +15,10 @@ After seeing some demos or trying out the [AWS Cloud Development Kit (CDK)](http
 
 Together with my fellow AWS Hero [Thorsten Hoeger](https://twitter.com/hoegertn), I gave a talk on CDK Deep Dive on the German [AWS Community Day](https://www.aws-community-day.de) where we tried to answer those questions. But I think it also makes sense to write them down. That's why I started a little series about typical questions around the CDK. 
 
-This one starts with: 
+This is the first part of a series 'Hey CDK'
+- How can I migrate my existing CloudFormation templates?
+- [How can I reference existing resources?](/blog/2019/09/20/hey-cdk-how-to-use-existing-resources/)
+- [How can I write even less code?](/blog/2019/10/01/hey-cdk-how-to-write-less-code/)
 
 ### How can I migrate my existing CloudFormation templates?
 
