@@ -21,6 +21,8 @@ exclude:
 collections:
   category:
     output: true
+    permalink: /:collection/:name/index.html
+
 
 # Site settings
 title: Philipps Blog
