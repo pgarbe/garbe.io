@@ -1,3 +1,4 @@
 ---
 tag: CDK
+layout: category
 ---

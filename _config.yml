@@ -52,7 +52,7 @@ highlightjs_theme: "monokai_sublime"
 disqus_shortname: pgarbe
 
 # Google analytics
-# ga_tracking_id: "UA-46808769-1"
+google_analytics: "UA-46808769-1"
 # see https://www.datenschutz.org/google-analytics-datenschutz/
 
 # Social icons and sharing options
