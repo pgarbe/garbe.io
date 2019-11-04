@@ -6,7 +6,7 @@ author: Philipp Garbe
 comments: true
 published: true
 categories: [AWS, CDK]
-keywords: "AWS, CDK, CloudFormation, Construct"
+keywords: "AWS, CDK, CloudFormation, AWS CDK, CloudFormation to CDK, CDK GetAtt, CDK import existing resources, Convert CloudFormation to CDK"
 description: "How Can I Migrate My Existing CloudFormation Templates"
 cover: /assets/heycdk.png
 ---

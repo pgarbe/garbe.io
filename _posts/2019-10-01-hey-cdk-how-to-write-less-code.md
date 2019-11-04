@@ -6,7 +6,7 @@ author: Philipp Garbe
 comments: true
 published: true
 categories: [AWS, CDK]
-keywords: "AWS, CDK, CloudFormation, Construct"
+keywords: "AWS, CDK, CloudFormation, AWS CDK, CloudFormation to CDK, CDK GetAtt, CDK Inheritance, CDK Aspects, CDK Composition"
 description: "Hey CDK, How can I write even less code?"
 cover: /assets/heycdk.png
 ---

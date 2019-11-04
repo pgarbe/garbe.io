@@ -6,7 +6,7 @@ author: Philipp Garbe
 comments: true
 published: true
 categories: [AWS, CDK]
-keywords: "AWS, CDK, CloudFormation, Construct"
+keywords: "AWS, CDK, CloudFormation, Construct Library, CDK Construct Library, AWS CDK, CDK Construct"
 description: "Construct your own CDK Construct Library"
 cover: /assets/cdk-construct-library.png
 ---
