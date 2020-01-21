@@ -17,6 +17,7 @@ This is the second part of a series 'Hey CDK'
 - [How can I migrate my existing CloudFormation templates?](/blog/2019/09/11/hey-cdk-how-to-migrate/)
 - How can I reference existing resources?
 - [How can I write even less code?](/blog/2019/10/01/hey-cdk-how-to-write-less-code/)
+- [How can I use tags in my custom constructs?](/blog/2020/01/21/hey-cdk-how-to-use-tags-in-custom-constructs/)
 
 
 ### How can I reference existing resources?

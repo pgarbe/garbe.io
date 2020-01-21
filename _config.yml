@@ -26,7 +26,7 @@ collections:
 
 # Site settings
 title: Philipps Blog
-subtitle: Living in Bavaria. Working in the Cloud. Docker Captain. AWS Cloud Hero
+subtitle: Living in Bavaria. Working in the Cloud. AWS Container Hero
 author: Philipp Garbe
 email: blog@garbe.io
 name: Philipp Garbe
@@ -42,7 +42,7 @@ cover: "/assets/header_image.jpg"
 # logo: ""
 
 # Build settings
-markdown: kramdown
+markdown: karpdown
 paginate: 5
 paginate_path: "/page:num/"
 inter_post_navigation: false

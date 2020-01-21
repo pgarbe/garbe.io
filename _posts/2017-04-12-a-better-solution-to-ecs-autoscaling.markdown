@@ -10,6 +10,8 @@ keywords: "AWS, ECS, Docker, auto scaling"
 description: "Scale your ECS cluster automatically and effectively without pains"
 ---
 
+> __Update:__  
+> It seems this blog post was the [trigger](https://github.com/aws/containers-roadmap/issues/76) for AWS to build their own solution. Since [CapacityProviders](https://aws.amazon.com/about-aws/whats-new/2019/12/amazon-ecs-capacity-providers-now-available/) are released I recommend to use them instead. Have a look into Nick Coulton's [deep dive](https://aws.amazon.com/blogs/containers/deep-dive-on-amazon-ecs-cluster-auto-scaling/) to understand how they work.
 
 In a [previous blog post](/blog/2016/10/17/docker-on-ecs-scale-your-ecs-cluster-automatically/), I showed you how an ECS cluster can automatically scale by using the built-in CloudWatch metrics. While this works very well when you scale out, it is still an issue to scale in because you've to choose one of the two metrics (CPU or memory). This article explains how a single metric allows you to effectively scale your cluster up and(!) down.
 

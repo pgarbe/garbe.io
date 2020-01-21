@@ -19,6 +19,7 @@ This is the first part of a series 'Hey CDK'
 - How can I migrate my existing CloudFormation templates?
 - [How can I reference existing resources?](/blog/2019/09/20/hey-cdk-how-to-use-existing-resources/)
 - [How can I write even less code?](/blog/2019/10/01/hey-cdk-how-to-write-less-code/)
+- [How can I use tags in my custom constructs?](/blog/2020/01/21/hey-cdk-how-to-use-tags-in-custom-constructs/)
 
 ### How can I migrate my existing CloudFormation templates?
 

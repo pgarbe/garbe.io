@@ -16,7 +16,8 @@ After seeing some demos or trying out the [AWS Cloud Development Kit (CDK)](http
 This is the third part of a series 'Hey CDK'
 - [How can I migrate my existing CloudFormation templates into CDK?](/blog/2019/09/11/hey-cdk-how-to-migrate/)
 - [How can I reference existing resources?](/blog/2019/09/20/hey-cdk-how-to-use-existing-resources/)
-- How can I adopt the same behavior for multiple constructs?
+- How can I write even less code?
+- [How can I use tags in my custom constructs?](/blog/2020/01/21/hey-cdk-how-to-use-tags-in-custom-constructs/)
 
 ### How can I write even less code?
 One benefit of the imperative approach of CDK is that the advantages of higher-level languages can now also be used for infrastructure code. Let's have a look at inheritance, composition, and aspects.
