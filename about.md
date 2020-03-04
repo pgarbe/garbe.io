@@ -12,7 +12,7 @@ Philipp works as Platform Architect at [RIO - The Logistics Group](https://rio.c
 
 He is driven by technologies and tools that allow him to deliver and release faster and more often. He expects that every commit automatically goes into production so it shouldn't be a surprise that he's excited about microservices, containers and cloud-native technologies. Affected by Pain Driven Development, he believes that things need to be changed whenever the pain is big enough.
 
-Philipp can be found talking at Meetups and Conferences mostly about topics around Docker, ECS and CloudFormation and his findings are also then shared on his blog. In addition, he is also a maintainer of the [Amazon ECS plugin for Jenkins](https://github.com/jenkinsci/amazon-ecs-plugin).
+Philipp can be found talking at Meetups and Conferences mostly about topics around Docker, ECS, CDK, and CloudFormation and his findings are also then shared on his blog. 
 
 He has been rewarded as [Docker Captain](https://www.docker.com/community/docker-captains) (2015 - 2018) and [AWS Container Hero](https://aws.amazon.com/developer/community/heroes/philipp-garbe/).
 
