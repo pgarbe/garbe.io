@@ -104,19 +104,24 @@ Don't be confused. It adds the UpdateReplacePolicy and DeletionPolicy explicitly
 
 #### B) Include the CloudFormation template in your CDK App
 
+> **Update 2020-07-02:** 
+> The first version used [CfnInclude](https://docs.aws.amazon.com/cdk/api/latest/docs/@aws-cdk_core.CfnInclude.html) of the core package. But recently, CDK published a new package [cloudformation-include](https://github.com/aws/aws-cdk/tree/master/packages/%40aws-cdk/cloudformation-include) which contains a better implementation.
+
 The third option is to create an empty CDK App and include your existing CloudFormation template by calling `CfnInclude`. If we synth that app, it renders the same CloudFormation template.
 
 ```typescript
-const include = new cdk.CfnInclude(this, "ExistingInfrastructure", {
-  template: yaml.safeLoad(fs.readFileSync("./my-bucket.yaml").toString())
+import * as cfn_inc from '@aws-cdk/cloudformation-include';
+
+const include = new cfn_inc.CfnInclude(this, 'ExistingInfrastructure', {
+  templateFile: 'my-bucket.yaml',
 });
 ```
 
 It's also possible to access attributes, like the Bucket ARN:
 
 ```typescript
-const bucketArn = cdk.Fn.getAtt("MyS3Bucket", "Arn");
-new cdk.CfnOutput(this, 'BucketArn', { value: bucketArn.toString() });
+const cfnBucket = cfnTemplate.getResource('MyS3Bucket') as s3.CfnBucket;
+new cdk.CfnOutput(this, 'BucketArn', { value: cfnBucket.attrArn.toString() });
 ```
 
 The synthesized template looks like this:
