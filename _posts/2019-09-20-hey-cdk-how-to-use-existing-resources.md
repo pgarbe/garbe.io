@@ -13,6 +13,9 @@ cover: /assets/heycdk.png
 
 After seeing some demos or trying out the [AWS Cloud Development Kit (CDK)](https://aws.amazon.com/cdk/), many questions arise. How can I migrate? What's about my existing resources? What is the Context about? And so on.
 
+> [![The journey of an AWS CloudFormation template to AWS CDK](/assets/reinvent.png)](https://virtual.awsevents.com/media/1_w1334jnq)
+> Watch my talk at re:Invent 2020 [The journey of an AWS CloudFormation template to AWS CDK](https://virtual.awsevents.com/media/1_w1334jnq)
+
 This is the second part of a series 'Hey CDK'
 - [How can I migrate my existing CloudFormation templates?](/blog/2019/09/11/hey-cdk-how-to-migrate/)
 - How can I reference existing resources?

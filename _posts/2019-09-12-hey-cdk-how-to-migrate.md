@@ -13,6 +13,9 @@ cover: /assets/heycdk.png
 
 After seeing some demos or trying out the [AWS Cloud Development Kit (CDK)](https://aws.amazon.com/cdk/), many questions arise. How can I migrate? What's about my existing resources? What is the Context about? And so on. 
 
+> [![The journey of an AWS CloudFormation template to AWS CDK](/assets/reinvent.png)](https://virtual.awsevents.com/media/1_w1334jnq)
+> Watch my talk at re:Invent 2020 [The journey of an AWS CloudFormation template to AWS CDK](https://virtual.awsevents.com/media/1_w1334jnq)
+
 Together with my fellow AWS Hero [Thorsten Hoeger](https://twitter.com/hoegertn), I gave a talk on CDK Deep Dive on the German [AWS Community Day](https://www.aws-community-day.de) where we tried to answer those questions. But I think it also makes sense to write them down. That's why I started a little series about typical questions around the CDK. 
 
 This is the first part of a series 'Hey CDK'
