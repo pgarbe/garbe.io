@@ -51,7 +51,7 @@ export class DeploymentStack extends cdk.Stack {
 
     // Upload the synthesized template to S3
     const templateFullPath = assembly.stacks[0].templateFullPath;
-    new s3deploy.BucketDeployment(this, 'DeployWebsite', {
+    const deployStack = new s3deploy.BucketDeployment(this, 'DeployStack', {
       sources: [s3deploy.Source.asset(path.dirname(templateFullPath))],
       destinationBucket: this.bucket,
     });
@@ -67,5 +67,12 @@ export class DeploymentStack extends cdk.Stack {
 
 Normally, CDK includes a check to ensure the account has been [bootstrapped](https://docs.aws.amazon.com/cdk/latest/guide/bootstrapping.html). In scenarios with StackSets or ServiceCatalog products it's not always possible to ensure that cdk bootstrap has run on the target accounts and it's often not needed. Replace the default synthesizer with `BootstraplessSynthesizer` so that the template does not contain this check.
 
+Don't forget to add an dependency to `deployStack` in your StackSet or ServiceCatalog product to be sure the stack template exists on S3 before it is actually used.
+
+```ts
+scProduct.node.addDependency(deployStack);
+```
+
 ### Answer
+
 To write the template file to file system before it is used in a `BucketDeployment`, put the stack into a dummy stage and run a `synth()` on that stage (a synth-in-synth).
