@@ -42,7 +42,7 @@ cover: "/assets/header_image.jpg"
 # logo: ""
 
 # Build settings
-markdown: karpdown
+# markdown: karpdown
 paginate: 5
 paginate_path: "/page:num/"
 inter_post_navigation: false

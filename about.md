@@ -8,13 +8,13 @@ footer: false
 
 <img src="/assets/philipp.png" alt="Philipp Garbe" style="float: right; width: 200px;"/>
 
-Philipp works as Platform Architect at [RIO - The Logistics Group](https://rio.cloud/). Prior to that, he was part of "Tatsu", a project that transformed the matured AutoScout24 IT setup into a nextgen Web-Scale IT platform. After that he created a cutting-edge cloud experience for Scout24's builder teams through automated tooling and products
+Philipp works as a Lead Platform Engineer at [Personio](https://www.personio.com) in Munich. As part of the Infrastructure Engineering team, he ensures that Personio is built and operated with excellence. Prior to that, he worked as product owner in the platform team of RIO, and has been involved in AutoScout24's journey to the cloud for many years.
 
 He is driven by technologies and tools that allow him to deliver and release faster and more often. He expects that every commit automatically goes into production so it shouldn't be a surprise that he's excited about microservices, containers and cloud-native technologies. Affected by Pain Driven Development, he believes that things need to be changed whenever the pain is big enough.
 
-Philipp can be found talking at Meetups and Conferences mostly about topics around Docker, ECS, CDK, and CloudFormation and his findings are also then shared on his blog. 
+Philipp can be found talking at Meetups and Conferences mostly about topics like Docker, ECS, CDK, and CloudFormation and his findings are also then shared on his blog. 
 
-He has been rewarded as [Docker Captain](https://www.docker.com/community/docker-captains) (2015 - 2018) and [AWS Container Hero](https://aws.amazon.com/developer/community/heroes/philipp-garbe/).
+He has been rewarded as [Docker Captain](https://www.docker.com/community/docker-captains) (2015 - 2018) and [AWS Container Hero](https://aws.amazon.com/developer/community/heroes/philipp-garbe/) (since 2019).
 
 <div style="display:inline-block">
 <img src="/assets/hero.png" alt="AWS Container Hero" style="float: left; width: 200px;"/>
