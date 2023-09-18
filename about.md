@@ -23,8 +23,12 @@ He has been rewarded as [Docker Captain](https://www.docker.com/community/docker
 ## Contact
 Email: [blog@garbe.io](mailto:blog@garbe.io)  
 Twitter: [@pgarbe](https://twitter.com/pgarbe)  
+Mastodon: [@pgarbe@awscommunity.social](https://awscommunity.social/@pgarbe)  
 LinkedIn: [https://linkedin.com/in/pgarbe](https://linkedin.com/in/pgarbe)  
 GitHub: [https://github.com/pgarbe](https://github.com/pgarbe)  
 Hero: [https://aws.amazon.com/developer/community/heroes/philipp-garbe/](https://aws.amazon.com/developer/community/heroes/philipp-garbe/)  
 
+## Disclaimer
 *The thoughts and comments expressed in my blog posts are my own and not my employer´s.*
+
+Philipp Garbe has been recognized by Amazon as an [AWS Hero](https://aws.amazon.com/developer/community/heroes/philipp-garbe/), which includes some perks, but the thoughts and opinions in this blog do not reflect Amazon’s official positions, nor does Amazon provide specific direction on what is published here.
