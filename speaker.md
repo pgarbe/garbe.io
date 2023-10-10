@@ -20,6 +20,8 @@ JAX TV: [Amazon ECS oder Kubernetes – welches Orchestrierungstool passt zu mir
 
 ## Talks / Videos
 
+CDK Day 2023 [Deep Dive on StackSets with AWS CDK](https://www.youtube.com/watch?v=qlUR5jVBC6c)
+
 AWS re:Invent 2020 [The journey of an AWS CloudFormation template to AWS CDK](https://www.youtube.com/watch?v=c5g8bIoKr0g)
 
 Jax London 2019 [Containers on AWS: What to use and when?](https://devops.jaxlondon.com/docker-kubernetes/containers-on-aws-what-to-use-and-when/)  

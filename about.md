@@ -12,9 +12,9 @@ Philipp works as a Lead Platform Engineer at [Personio](https://www.personio.com
 
 He is driven by technologies and tools that allow him to deliver and release faster and more often. He expects that every commit automatically goes into production so it shouldn't be a surprise that he's excited about microservices, containers and cloud-native technologies. Affected by Pain Driven Development, he believes that things need to be changed whenever the pain is big enough.
 
-Philipp can be found talking at Meetups and Conferences mostly about topics like Docker, ECS, CDK, and CloudFormation and his findings are also then shared on his blog. 
+Philipp can be found talking at Meetups and Conferences mostly about topics like CDK, Containers, and Serverless and his findings are also then shared on his blog. 
 
-He has been rewarded as [Docker Captain](https://www.docker.com/community/docker-captains) (2015 - 2018) and [AWS Container Hero](https://aws.amazon.com/developer/community/heroes/philipp-garbe/) (since 2019).
+He has been rewarded as [Docker Captain](https://www.docker.com/community/docker-captains) (2015 - 2018) and [AWS Container Hero](https://aws.amazon.com/developer/community/heroes/philipp-garbe/) (since 2018).
 
 <div style="display:inline-block">
 <img src="/assets/hero.png" alt="AWS Container Hero" style="float: left; width: 200px;"/>
