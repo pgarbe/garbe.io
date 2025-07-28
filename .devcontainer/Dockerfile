@@ -3,7 +3,7 @@
 # Licensed under the MIT License. See https://go.microsoft.com/fwlink/?linkid=2090316 for license information.
 #-------------------------------------------------------------------------------------------------------------
 
-FROM ruby:2
+FROM ruby:3
 ENV LC_ALL="C.UTF-8"
 ENV LANG="en_US.UTF-8"
 ENV LANGUAGE="en_US.UTF-8"
